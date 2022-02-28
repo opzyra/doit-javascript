@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      변수란?
+      데이터를 담는 그릇
+      프로그래밍은 기본적으로 데이터를 다룬다. 데이터를 수정하거나 가공하거나 등등..
+      데이터를 입력받아 결과를 출력하는 것이 프로그래밍인데..
+      입력받은 데이터를 담는 그릇
+
+      밥그릇,, 반찬그릇,,
+      무엇을 남느냐에 따라 그릇의 성격이 달라짐
+      엑셀의 SUM을 예로들면 SUM(1,2) => 3
+
+
+      데이터 타입
+      밥그릇, 반찬그릇은
+      밥 또는 반찬을 담을수 있는 그릇인거네..
+      javscript는 7개의 데이터 타입(자료형)이 있어
+
+
+      1. String => 문자("a"), 문자열("aa")
+      2. Number => 숫자(1)
+      3. Boolean => 참과 거짓 TRUE(1), FALSE(0)
+      4. undefined => 정의되지 않음
+      5. null => 비어있는
+
+      6. BIGINT => 좀큰숫자 (잘안씀..)
+      7. Symbol => 아직몰라도 되...
+
+    */
+
+      /*
+      1. 변수 선언
+      var 변수명; => undefined 변수는 선언했는데 값을 정의하지 않음..
+      var 변수명 = null; 비어있는
+
+      2. 변수 값 할당 => 값을 넣는것 담아주는것
+      var 변수명; // 선언
+
+      변수명 = 값; // 값 할당
+
+
+      3. 선언과 동시에 할당
+      var 변수명 = 변수에 담을 값;
+
+    */
+      var age = 20;
+      // document.write(age);
+
+      /*
+        1. 문자
+        문자 큰따움표 혹은 작은표로 감싼다.
+        큰따움표를 통상적으로 사용한다.
+      */
+
+      var s = "javascript";
+      var c = "html";
+
+      var a = '호랑이가 말했습니다. "어흥"';
+      var input = '<input type="text" />';
+
+      /*
+        2. 숫자
+        그냥 숫자쓰면댐;
+      */
+      var number = 1;
+      var number2 = 5858585;
+
+      /*
+        3. 불린
+        true false
+      */
+
+      var isMan = true;
+      var isComputer = false;
+
+      /*
+        4. undefined
+        선언은 했으나 값이 할당되지 않은 경우
+      */
+      var car;
+
+      /*
+        5. null
+        선언도 했고 안에 값이 비어있는걸 명시적으로 표현
+      */
+      var pet = null;
+
+      // 자료형을 확인하는 방법
+      //document.write(typeof car);
+
+      /*
+        변수 선언시 주의사항
+        1. 변수명은 첫글자로 $ _ 영문자로 시작
+        var _1;
+        var $1;
+
+        2. 첫글자 뒤에 모든 것은 영문자, 숫자, $, _로만 가능함
+
+        var _5%2 => X
+        var roa-dkmc => X
+        var SO_ROK => O
+        var $__$ => O
+
+        3. 예약어를 쓸수없다.
+        var document, location, window
+
+        4. 되도록 의미를 부여해라 변수명에
+        var $_$ = ????? 이렇게쓰면 욕해
+        var age
+        var phone
+        var gender
+        
+        5. 대소문자 구분해라!
+        var number = 1;
+        var NUMBER = 2;
+        
+      */
+      document.write(NUmber);
+    </script>
+  </body>
+</html>

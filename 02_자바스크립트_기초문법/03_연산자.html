@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      연산자
+      산술연산자 사칙연산
+      + => 더하기
+      - => 빼기
+      * => 곱하기
+      / => 나누기 (몫)
+      % => 나머지
+    */
+      var man1 = 33;
+      var man2 = 54;
+
+      document.write(man1 + man2);
+      document.write("<br/>");
+
+      man2 = 4;
+
+      document.write(man1 + man2);
+
+      /*
+        문자결합 연산자
+        +
+      */
+
+      var num1 = "1000";
+      var num2 = 1000;
+
+      document.write("<br/>");
+      document.write("javascript" + "배우자");
+      document.write("<br/>");
+      document.write("나이는" + man1);
+      document.write("<br/>");
+      document.write(num1 + num2); // 2000 (X) => 10001000 (O)
+
+      /*
+        대입연산자
+        =
+        복합대입연산자..
+        +=
+        -=
+        *=
+        /=
+      */
+      var vvv = 1;
+
+      var n1 = 0;
+      var n2 = 1;
+      // n1 = n1 + 1; // 1
+      // n1 += 1; // 1
+      // n1 += n2;
+      n1 = n1 + n2;
+      document.write(n1); //?
+      document.write(n2); //?
+
+      /*
+        증감연산자
+        ++
+        --
+      */
+      // var a = 3;
+      // a++; // a = a + 1; a =3
+      // ++a;
+      // a--; // a = a - 1;
+      // --a;
+      // document.write(a);
+
+      var a = 1;
+      var b = a++ + 5;
+      // 여기서부터 a = 2야..
+      document.write("<br/>");
+      document.write(b);
+
+      /*
+        비교연산자
+        A > B A가 B보다 크다.
+        A >= B A가 B보다 크거나 같다.
+        A < B A가 B보다 작다.
+        A <= B A가 B보다 작거나 같다.
+        A == B A는 B와 같다.
+        A != B A는 B와 같지 않다.
+
+        A === B 자료형까지 같다.
+        A !== B 자료형까지 같지 않다.
+
+        비교연산자의 결과는 true, false
+
+      */
+      var a1 = "1";
+      var b1 = 1;
+      document.write("<br/>");
+      document.write(a1 == b1); // true
+      document.write(a1 === b1); // false
+
+      /*
+      논리연산자
+      and(그리고) or(또는) not(아님)
+      and &&
+      or ||
+      not !
+      결과는 true, false
+
+     */
+
+      var a2 = true;
+      var a3 = false;
+      var a4 = (a2 && a3) || a2 || false;
+
+      document.write("<br/>");
+      document.write(a4);
+    </script>
+  </body>
+</html>
