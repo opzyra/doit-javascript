@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      삼항연산자
+      조건문의 축소판
+      미니멈한 버전
+
+      간단하게 쓸수있다.
+      변수에 값을 조건에 따라 할당하고 싶은경우 많이 사용한다.
+      하지만 과도하게 사용하는 경우 코드의 가독성을 해친다.
+
+      조건식(boolean) ? 참일경우 실행 : 거짓일경우 실행
+    */
+
+      // 사용법
+      1 === 1 ? document.write("참") : document.write("거짓");
+
+      // 액션을 취하는것보다는 변수에 값을 할당하는 경우에 많이 사용
+      var gender = "여자";
+      var army = gender === "남자" ? "갔다옴" : "관계없음";
+      document.write("<br/>");
+      document.write(army);
+
+      // 삼항연산자의 중첩사용
+      // 코드 가독성을 해치기 때문에 권장하지는 않는다 => if문이라는 조건문으로 대체해서 사용해라.
+      var number = -1; // 초기화
+      var type = number > 0 ? "양수 정수" : number !== 0 ? "음의정수" : "영";
+      document.write("<br/>");
+      document.write(type);
+    </script>
+  </body>
+</html>
