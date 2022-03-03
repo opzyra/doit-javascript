@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        제어문의 조건문
+        조건에 따라서 프로그래밍을 제어한다.
+        조건 => boolean값에따라서 결정된다. true or false
+        논리연산자 사용가능함. && || !
+        비교연산자도 사용가능함. === !== >= <= > <
+
+        javascript의 특징
+        1, null이 아닌것 => true
+        0, null, undefined, ""(빈문자) ''(빈문자) => false;
+
+
+        조건문의 종류
+        if, if~else if~elseif~else(생략가능)
+      */
+
+      /*
+        if(조건식) {
+          참일경우 실행할 자바스크립트 코드
+        }
+      */
+      var a = null;
+      if (!a) {
+        document.write("참이다");
+      }
+
+      document.write("<br/>");
+
+      /*
+        if(조건식) {
+          참일경우 실행할 자바스크립트 코드
+        } else {
+          거짓일 경우 실행할 자바스크립트 코드
+        }
+      */
+      if (true) {
+        document.write("이프엘스 참");
+      } else {
+        document.write("이프엘스 거짓");
+      }
+
+      document.write("<br/>");
+
+      /*
+        if(조건식) {
+          참일경우 실행할 자바스크립트 코드
+        } elseif() {
+          거짓일 경우 실행할 자바스크립트 코드
+        } else { // 최종적으로 조건에 다 해당이 안되는경우
+
+        }
+
+        
+         = number > 0 ? "양수 정수" : number !== 0 ? "음의정수" : "영";
+      */
+      var number = 1; // 초기화
+      var type; // 선언만함
+
+      if (number > 0) {
+        type = "양의정수"; // 정의 할당
+      } else if (number < 0) {
+        type = "음의정수";
+      } else {
+        type = "영";
+      }
+
+      document.write(type);
+    </script>
+  </body>
+</html>

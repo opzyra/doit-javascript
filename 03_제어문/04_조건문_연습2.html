@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var r = 255;
+      var g = 0;
+      var b = 0;
+
+      if (r + g + b === 0) {
+        document.write("검정색");
+      }
+
+      if (r + g + b === 255 * 3) {
+        document.write("흰색");
+      }
+
+      if (r === 255 && g === 0 && b === 0) {
+        document.write("빨간색");
+      }
+
+      if (r === 0 && g === 255 && b === 0) {
+        document.write("녹색");
+      }
+
+      if (r === 0 && g === 0 && b === 255) {
+        document.write("파란색");
+      }
+    </script>
+  </body>
+</html>

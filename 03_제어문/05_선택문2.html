@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      break 의 역할
+      case에 해당할 경우 브레이크를 만날때까지 계속 실행한다.
+
+      비교연산자(<=, >= >, <)는 사용할 수 없다.
+      */
+
+      var season = "가을";
+
+      switch (season) {
+        // season === "봄" || season === "여름";
+        case "봄":
+        case "여름":
+          document.write("따뜻");
+          break;
+        case "가을":
+        case "겨울":
+          document.write("추움");
+          break;
+        default:
+          document.write("뭥미?");
+      }
+    </script>
+  </body>
+</html>

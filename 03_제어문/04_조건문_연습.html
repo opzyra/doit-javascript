@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        중첩 if문
+        중첩 조건문
+        if(조건) {
+          if(조건) {
+
+          }
+        }
+      */
+
+      var army = false;
+      var gender = "man";
+      var weight = 32;
+
+      if (gender === "man") {
+        if (weight >= 40) {
+          army = true;
+        }
+      } else {
+        army = false;
+      }
+
+      if (army) {
+        document.write("현역 입니다.");
+      } else {
+        document.write("현역이 아닙니다.");
+
+        if (gender === "man") {
+          document.write("체중미달");
+        } else {
+          document.write("대상자 아님");
+        }
+      }
+    </script>
+  </body>
+</html>
