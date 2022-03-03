@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    사과: <input id="apple" type="text" /><br />
+    멜론: <input id="melon" type="text" /><br />
+    바나나: <input id="banana" type="text" /><br />
+    <button id="button" type="button">구매</button>
+    <script>
+      /*
+        수중에 돈이 만원이 있다.
+        각 과일의 1개당 가격은 아래와 같다.
+        사과: 1000원
+        멜론: 2000원
+        바나나: 700원
+
+        사과, 멜론, 바나나 원하는 갯수를 입력했을때
+        구매가 가능한경우 거스름돈을 출력하고
+
+        구매가 불가능한 경우 예산초과 금액을 출력(document.write)한다.
+
+        예시1
+          입력
+            사과: 8
+            멜론: 0
+            바나나: 1
+          출력
+            거스름돈 1300원
+          
+        예시2
+          입력
+            사과: 5
+            멜론: 10
+            바나나: 0
+          출력
+            예산초과 15000원
+
+      */
+      document.getElementById("button").addEventListener("click", () => {
+        var apple = document.getElementById("apple").value;
+        var melon = document.getElementById("melon").value;
+        var banana = document.getElementById("banana").value;
+
+        /*
+          사용자가 입력한 정보가 apple, melon, banana 에 담겨있다.
+          아래의 코드는 확인용이다.
+        */
+        document.write(apple);
+        document.write("<br/>");
+        document.write(melon);
+        document.write("<br/>");
+        document.write(banana);
+      });
+    </script>
+  </body>
+</html>

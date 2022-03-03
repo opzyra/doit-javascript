@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    아이디: <input id="id" type="text" /><br />
+    비밀번호: <input id="password" type="password" /><br />
+    <button id="button" type="button">로그인</button>
+    <script>
+      /*
+
+        아래의 회원명단에 있는 정보와 일치하는 
+        아이디와 비밀번호를 입력했을때 해당 회원의 이름 + 님 환영합니다가 화면에 표기되는 프로그램
+
+        회원명단은 아래와 같다.
+        |   아이디   |   비밀번호   |   이름   |
+        | hong      | 5541         | 홍길동   |
+        | lee       | korea12      | 이순신   |
+        | jobs      | #$sww21      | 잡스     |
+
+        단, 아이디나 비밀번호를 입력하지 않은 경우
+        아이디를 입력하세요.
+        비밀번호를 입력하세요.
+        라는 메시지를 alert창으로 보여준다.
+
+        회원명단에 아이디가 없는경우
+        회원명단에 없습니다.
+
+        비밀번호가 잘못된 경우
+        비밀번호를 확인해주세요.
+
+        라는 메시지를 alert창으로 보여준다.
+
+        예시
+        입력:
+          아이디: hong
+          비밀번호: 5541
+        
+        출력:
+          홍길동님 환영합니다.
+      */
+
+      document.getElementById("button").addEventListener("click", () => {
+        var id = document.getElementById("id").value;
+        var password = document.getElementById("password").value;
+
+        /*
+          alert 사용법
+
+          alert(전하고자는 메시지 스트링);
+          return; << 확인버튼 누르면 프로그램 중단
+
+
+          alert("안녕하세요?");
+          return; 
+
+
+        */
+
+        /*
+          사용자가 입력한 정보가 id, password에 담겨있다.
+          아래의 코드는 확인용이다.
+        */
+        document.write(id);
+        document.write("<br/>");
+        document.write(password);
+      });
+    </script>
+  </body>
+</html>

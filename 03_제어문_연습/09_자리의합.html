@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      입력한 수의 모든 자리의 합을 출력하는 프로그램을 작성하시오.
+
+      예시1
+        입력
+          123
+        출력
+          6
+
+      예시2
+        입력
+          5475
+        출력
+          21
+      
+    */
+
+      /*
+        number에는 사용자가 입력한 수 정보가 있다.
+        length에는 사용자가 입력한 수의 길이 정보가 있다.
+      */
+      var number = prompt("수 입력", "0");
+      var length = number.length;
+      number = parseInt(number);
+
+      /*
+        아래는 확인용
+      */
+
+      document.write(number);
+      document.write("<br/>");
+      document.write(length);
+    </script>
+  </body>
+</html>
