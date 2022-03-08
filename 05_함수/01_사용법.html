@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 엑셀의 SUM
+      var a = 5;
+      var b = 6;
+
+      var c = a + b; // 엑셀의 SUM 처럼 추상화하여 관리
+      // 두개의 수를 더한 결과 행동
+      // 그 행동만 별도로 만들어놓고
+      // 어떤 데이터가 오는 것에대해서는 이 함수를 사용하는 사람에게 맡긴다.
+
+      // 셀값의 갑? 1 + 2 = 3
+      // =SUM(1,2)
+
+      /* 함수 선언 방법
+      매개변수 === 파라미터
+      function 함수이름(매개변수들) {
+        자바스크립트 코드
+        return 데이터;
+      }
+
+      */
+      // rest 파라미터
+      function sum() {
+        var result = 0;
+        for (var i = 0; i < arguments.length; i++) {
+          result = result + arguments[i];
+        }
+
+        if (result >= 10) {
+          return "난 계산 못해요";
+        }
+
+        return result;
+      }
+
+      function subtract(a, b) {
+        if (a >= b) {
+          return a - b;
+        } else {
+          return "음수입니다";
+        }
+      }
+
+      var result = sum(2, 4, 5, 10);
+      document.write(result);
+      // 함수의 장점
+      // 가장큰 이유는 재사용
+      // 수정이 편해
+    </script>
+  </body>
+</html>
