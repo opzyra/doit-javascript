@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+         입력한 수의 모든 자리의 합을 출력하는 프로그램을 작성하시오.
+         예시1
+           입력
+             123
+           출력
+             6
+         예시2
+           입력
+             5475
+           출력
+             21
+
+       */
+
+      /*
+           number에는 사용자가 입력한 수 정보가 있다.
+           length에는 사용자가 입력한 수의 길이 정보가 있다.
+         */
+      var number = prompt("수 입력", "0");
+      var length = number.length;
+      number = parseInt(number);
+
+      /*
+           아래는 확인용
+         */
+      var sum = 0;
+      // 몫을 알아내는 방법 300 10*10
+      // 5000 10*10*10 1000 몫 5
+
+      // 74523 10*10*10*10 10000 몫 7
+
+      // 내가 원하는 자리수를 10* (자리수-1)의 제곱로 나누고 나온 몫이다.
+
+      // 12 입력했다 생각하고 짜보자..
+      // number = 12  342
+      // length = 2   3
+
+      for (var i = length; i > 0; i--) {
+        var count = 1;
+        for (var j = 1; j <= length - 1; j++) {
+          count = count * 10;
+        }
+
+        sum = sum + Math.ceil(number / count);
+
+        // 후처리 해야할것?
+        number = number - (number % count);
+      }
+
+      document.write(sum);
+
+      /* document.write(number);
+       document.write("<br/>");
+       document.write(length);
+       */
+    </script>
+  </body>
+</html>

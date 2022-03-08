@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        점수를 입력하면 등급을 화면에 출력(document.write)해주는 프로그램
+        90점이상 A
+        80점이상 B
+        70점이상 C
+        60점이상 D
+        60점미만 F
+        예시
+          입력: 50
+          출력: F
+      */
+
+      // 점수는 score에 저장된다.
+      var score = prompt("당신의 성적 점수는", 0);
+
+      if (score >= 90 && score <= 100) {
+        document.write("A 입니다.");
+      } else if (score >= 80 && score < 90) {
+        document.write("B 입니다.");
+      } else if (score >= 70 && score < 80) {
+        document.write("C 입니다.");
+      } else if (score >= 60 && score < 70) {
+        document.write("D 입니다.");
+      } else if (score >= 0 && score < 60) {
+        document.write("F 입니다.");
+      } else {
+        alert("잘못기입하셨습니다. 다시 입력해주세요.");
+        location.reload();
+      }
+      // 출력은 document.write()를 사용할것;
+    </script>
+  </body>
+</html>

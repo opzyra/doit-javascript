@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        아래의 모양이 출력(document.write)되는 프로그램을 작성하시오.
+        출력
+        12345
+        23456
+        34567
+        45678
+        56789
+
+        행마다 5개씩 나옴
+        전체가 5개의 행임
+        첫번째 숫자가 몇행인지에 따라 바뀜
+
+      */
+      /*
+      for (var i = 1; i <= 5; i++) {
+        if (i === 1) {
+          for (var j = 1; j <= 5; j++) {
+            document.write(j);
+          }
+        } else if (i === 2) {
+          for (var j = 2; j <= 6; j++) {
+            document.write(j);
+          }
+        } else if (i === 3) {
+          for (var j = 3; j <= 7; j++) {
+            document.write(j);
+          }
+        } else if (i === 4) {
+          for (var j = 4; j <= 8; j++) {
+            document.write(j);
+          }
+        } else if (i === 5) {
+          for (var j = 5; j <= 9; j++) {
+            document.write(j);
+          }
+        }
+        document.write("<br>");
+      }
+      */
+
+      for (var i = 1; i <= 5; i++) {
+        for (var j = i; j <= i + 4; j++) {
+          document.write(j);
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>
