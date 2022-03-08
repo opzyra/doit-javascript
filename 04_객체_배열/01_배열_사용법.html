@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      배열
+      변수를 선언하고 데이터를 할당할때 
+      var a = 1;
+
+      a === 1
+
+      세상의 자료들은 꼭 하나의 값만 가지지는 않는다..
+      자료의 집합체
+      배열
+
+      배열안에는 다양한 자료들이 들어갈수있다.
+      배열은 고유의 인덱스 번호(자기 자신의 id?) 가 있다.
+
+      학교 학생명부
+      1 ~ 35번 학생의 이름이 적혀 있다.
+      1번 홍길동
+      2번 이순신
+      3번 강감찬
+
+
+      배열의 선언
+
+    */
+
+      // 변수를 선언해서 배열로 초기화한다. 배열이 비어있는 배열
+      // 자바스크립트 7대 기본 자료형에는 포함 안됨
+
+      // 자료의 구조 배열 => array
+      var array = []; // 자바스크립트에선 가능함.
+      var array2 = new Array(); // 나중에 객체 배울대 나올거야.
+
+      // array index의 시작 번호는 0번이다
+      var frut = ["사과", "딸기", "바나나"];
+
+      for (var i = 0; i <= 2; i++) {
+        document.write(frut[i] + "는 맛있어");
+        document.write("<br/>");
+      }
+
+      // 게시판 정보를 화면에 출력한다.
+      // 많이 사용됨..
+      var posts = ["안녕하세요 첫번째 글입니다.", "두번째요", "..."];
+    </script>
+  </body>
+</html>
