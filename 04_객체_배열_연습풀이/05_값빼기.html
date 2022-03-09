@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      길이가 5인 배열(array)가 있다.
+      사용자는 0~5가지 입력할수 있고
+      입력한 수만큼 배열의 뒤 요소를 제거한 결과를 화면에 출력하시오.
+
+      예시1
+        배열 
+          [1,5,4,2,1]
+        입력
+          1
+        출력
+          1,5,4,2
+          
+      예시2
+        배열 
+          [1,5,4,2,1]
+        입력
+          2
+        출력
+          1,5,4
+
+
+        // 배열의 마지막 요소를 삭제하는 메서드 pop();
+      */
+
+      var array = [1, 5, 4, 2, 1, 9];
+
+      var number = prompt("삭제하실?", "0");
+      number = parseInt(number);
+
+      // for (var i = 0; i < number; i++) {
+      //   // 반복문 응용 + 배열의 pop 활용
+      //   array.pop();
+      // }
+
+      array.splice(array.length - number, number);
+
+      //   if (number === 0) {
+      //     array.splice(5, 0);
+      //     document.write(array);
+      //  } else if (number === 1) {
+      //   array.splice(4);
+      //   document.write(array);
+      //  } else if (number === 2) {
+      //   array.splice(3,2);
+      //   document.write(array);
+      //  } else if (number === 3) {
+      //   array.splice(2,3);
+      //   document.write(array);
+      //  } else if (number === 4) {
+      //   array.splice(1,4);
+      //   document.write(array);
+      //  } else if (number === 5) {
+      //   array.splice(0,5);
+      //   document.write(array);
+      //  }
+
+      document.write(array);
+    </script>
+  </body>
+</html>

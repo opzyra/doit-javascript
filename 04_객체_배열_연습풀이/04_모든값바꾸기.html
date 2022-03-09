@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        주어진 배열의 값이 짝수면 짝수 홀수면 홀수로 배열을 변경하여 출력하시오.
+
+        출력
+          짝수, 홀수, 짝수, 홀수, 홀수
+      */
+      // 아래의 코드는 절대 수정하지 말것!
+      var array = [54, 23, 40, 59, 69];
+
+      // 여기부터 작성하시오.
+
+      for (i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+          array[i] = "짝수";
+          // array.splice(i, 1, "짝수");
+        } else {
+          array[i] = "홀수";
+          // array.splice(i, 1, "홀수");
+        }
+      }
+
+      // 아래의 코드는 절대 수정하지 말것!
+      document.write(array);
+    </script>
+  </body>
+</html>

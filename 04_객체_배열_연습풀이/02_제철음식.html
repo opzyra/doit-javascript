@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        월별 제철음식 목록을 배열로 만들어
+        사용자가 월을 입력하면 해당 음식이 출력되는 프로그램을 작성하시오.
+
+        1월 귤
+        2월 오곡밥
+        3월 봄나물
+        4월 죽순
+        5월 완두
+        6월 양파
+        7월 수박
+        8월 옥수수
+        9월 고구마
+        10월 밤
+        11월 은행
+        12월 마
+
+
+        예시1
+          입력
+            1
+          출력
+            귤
+
+        예시2
+          입력
+            5
+          출력
+            완두
+      */
+
+      // 아래의 코드는 절대 수정하지 말것!
+      var month = prompt("제철 달력 월 입력", "0");
+      month = parseInt(month);
+      document.write("<br/>");
+      // 여기부터 작성하시오.
+      var food = [
+        "귤",
+        "오곡밥",
+        "봄나물",
+        "죽순",
+        "완두",
+        "양파",
+        "수박",
+        "옥수수",
+        "고구마",
+        "밤",
+        "은행",
+        "마",
+      ];
+      document.write(food[month - 1]); // 인덱스와 실제 값이 다를경우에 어떻게 해야하는가?
+      // 현실세계 1 시작
+      // 배열의 인덱스 0 시작
+    </script>
+  </body>
+</html>
