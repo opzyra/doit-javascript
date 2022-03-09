@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        수를 입력하면 절대값을 화면에 출력하는 프로그램을 작성하시오
+        ※ abs 함수를 만들어야함.
+      */
+
+      // 아래의 코드는 절대 수정하지 말것!
+      var number = prompt("수입력", 0);
+      number = parseInt(number);
+
+      // 여기부터 작성하시오.
+      // 함수안에서 조건문사용, 절대값을 어떻게 구하는가?
+      // 사실은 이게 출제의도임.. 수학...
+      function abs(number) {
+        if (number > 0) {
+          return number;
+        } else {
+          return number * -1;
+        }
+      }
+
+      // 아래의 코드는 절대 수정하지 말것!
+      document.write("결과:" + abs(number));
+    </script>
+  </body>
+</html>
