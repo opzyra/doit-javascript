@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      재귀함수 호출
+      자신을 다시 호출하는 함수
+      5! = 1x2x3x4x5
+      피보나치수열? 잘모르겠다..
+    */
+      var sum = 0; // 초기화 1+2
+      function recur() {
+        var number = prompt("숫자를 입력하시오.(0 입력시 종료)", "0");
+        number = parseInt(number);
+
+        if (number === 0) {
+          document.write(sum);
+          return;
+        }
+
+        sum += number;
+        recur();
+      }
+
+      recur();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var num = 100;
+      // function menu() {
+      //   num += 100;
+      //   alert(num);
+      // }
+      // menu(); // 호이스팅
+
+      // function menu() {
+      //   alert(num);
+      // }
+      /*
+        즉시실행함수
+        function 함수명() {
+          내용..
+        }
+        함수명();
+
+        // 익명 or 무명 함수
+        // anonymous function
+        function() {}
+
+        // 익명, 무명함수
+        // 유명함수
+
+        // 전역변수와 겹칠 일이 없음..
+        (function() {
+          // 함수의 이름이 없기떄문에 바로 호출
+          var a = 1;
+        })();
+      */
+
+      var a = 1; // 전역
+
+      function b() {
+        var a = 2; // 지역변수 아니야.. var 가 없다..
+        console.log(a);
+      }
+
+      // 익명함수
+      // 함수명();
+      (function () {
+        // 이부분은 안전한 구역
+      })();
+
+      // console.log(a); // 1
+      // b(); // 2? 전역변수를 건들임
+      // console.log(a); // 2?
+    </script>
+  </body>
+</html>
