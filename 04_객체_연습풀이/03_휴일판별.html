@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        사용자가 년,월,일 을 입력하면 해당일이 일요일 인지 판별하여
+        쉬는날입니다 / 일하세요를 화면에 출력한다.
+        
+        예시1
+          입력:
+            2022
+            3
+            10
+          출력:
+            일하세요
+
+        예시2
+          입력:
+            2022
+            3
+            13
+          출력:
+            쉬는날입니다
+      */
+
+      // 입력한 정보는 아래에 담겨있음.
+      var year = prompt("년", 0);
+      year = parseInt(year);
+      var month = prompt("월", 0);
+      month = parseInt(month);
+      var day = prompt("일", 0);
+      day = parseInt(day);
+   
+      var holiday = new Date(year,(month - 1),day);
+      var holidaySunday = holiday.getDay();
+
+      if (holidaySunday === 0) {
+        document.write("쉬는날입니다.")
+      } else {
+        document.write("일하세요.")
+      } 
+ 
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        문자열 내장객체
+
+        "".메서드()
+
+      */
+
+      var str = "web he she he";
+      var str2 = "hello javascript";
+
+      // charAt()
+      document.write(str.charAt(5)); // e
+      document.write("<br/>");
+
+      // indexOf()
+      // 스트링타입 안에 문자열안에 문자가 있는지 없는지 체크할때 사용
+      document.write(str.indexOf("he")); // 4 없을때는 -1
+      document.write("<br/>");
+
+      // lastIndexOf()
+      // indexOf를 뒤에서부터..
+      document.write(str.lastIndexOf("he")); // 11 없을때는 -1
+      document.write("<br/>");
+
+      // match
+      // 일치하는 문자를 반환 return 없을땐 null을 리턴한다.
+      document.write(str.match("안녕"));
+      document.write("<br/>");
+
+      // replace 치환
+      document.write(str.replace("web", "html")); // html he she he
+      document.write("<br/>");
+
+      // slice
+      // 문자를 자르고 나머지를 리턴한다.
+      document.write(str2.slice(3, 7)); // lo j
+      document.write("<br/>");
+
+      // substring
+      document.write(str2.substring(3, 7)); // lo j
+      document.write("<br/>");
+
+      // substr
+      document.write(str2.substr(3, 2)); // lo
+      document.write("<br/>");
+
+      // split
+      // 문자열을 배열로 변환
+      var str3 = "사과,딸기,바나나";
+      document.write(str3.split(","));
+      var array = str3.split(",");
+      document.write("<br/>");
+      document.write(array.length);
+      document.write("<br/>");
+
+      // toLowerCase, toUpperCase
+      var str4 = "HELLO";
+      var str5 = "apple";
+      document.write(str4.toLowerCase()); // hello;
+      document.write("<br/>");
+      document.write(str5.toUpperCase()); // APPLE;
+      document.write("<br/>");
+
+      // contact()
+      document.write("a" + "b");
+      document.write("<br/>");
+
+      // charCodeAt()
+      document.write("A".charCodeAt());
+      document.write("<br/>");
+
+      // trim()
+      var id = "opzyra";
+      var input = "opzyra ";
+      document.write(input);
+      document.write("<br/>");
+      document.write(input.trim());
+      document.write("<br/>");
+      if (id === input.trim()) {
+      }
+    </script>
+  </body>
+</html>
