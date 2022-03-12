@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        캐피털라이즈란 문자열의 첫글자만 대문자로 만드는 기술이다.
+        capitalize 함수를 만들어 영단어를 입력하면 첫글자만 대문자가 되도록 화면에 출력하는 프로그램을 작성하시오.
+
+        예시
+          입력
+            apple
+          출력
+            Apple
+      */
+      var message = prompt("영단어 입력", "");
+      // 여기서 부터 작성하시오.
+
+      function capitalize() {
+        // return message.charAt(0).toUpperCase() + message.slice(1).toLowerCase();
+        return (
+          message.substring(0, 1).toUpperCase() +
+          message.substring(1, message.length).toLowerCase()
+        );
+
+        /*
+        "apple" length = 5
+                0 ~ 4
+        */
+      }
+
+      // 아래의 내용은 지우지말것!
+      document.write(capitalize(message));
+    </script>
+  </body>
+</html>

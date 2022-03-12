@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        아래의 문자열에서 javascript가 몇번 적혀있는지 추출하는 프로그램을 작성하시오.
+      */
+      var str =
+        "css,html,javascript,java,php,javascript,python,react,vue,backbone,nodejs,javascript";
+
+      var result = str.split(",");
+      var count = 0;
+
+      for (i = 0; i < result.length; i++) {
+        if (result[i] === "javascript") {
+          count++;
+        }
+      }
+      document.write(count);
+    </script>
+  </body>
+</html>

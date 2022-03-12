@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        주민번호 앞자리 + 뒷자리 한자리 입력하면 아래의 형태로 출력되는 프로그램을 작성하시오.
+        (총 7자리 입력)
+
+        예시1
+          입력
+            9102151
+          출력
+            1991년 02월 15일
+        
+        예시2
+          입력
+            0203013
+          출력
+            2002년 03월 01일
+        
+        예시3
+          입력
+            9412192
+          출력
+            1994년 12월 19일
+      */
+      var number = prompt("주민번호 앞자리 + 뒷자리 한자리", "");
+
+      // 9412192
+      var year = number.substring(0, 2);
+      var month = number.substring(2, 4);
+      var date = number.substring(4, 6);
+      var sper = number.substring(6, 7); // string
+
+      var fullYear = "";
+
+      if (sper === "1" || sper === "2") {
+        // 1900년대 생
+        fullYear = "19";
+      }
+
+      if (sper === "3" || sper === "4") {
+        // 2000년대 생
+        fullYear = "20";
+      }
+
+      var birthDay = fullYear + year + "년 " + month + "월 " + date + "일";
+      document.write(birthDay);
+
+      // var years1 = number.charAt(0);
+      // var years2 = number.charAt(1);
+      // var month1 = number.charAt(2);
+      // var month2 = number.charAt(3);
+      // var date1 = number.charAt(4);
+      // var date2 = number.charAt(5);
+
+      // if (years1 > 9) {
+      //   yaers0 = 20;
+      // } else {
+      //   yaers0 = 19;
+      // }
+
+      // var birthDay =
+      //   yaers0 +
+      //   years1 +
+      //   years2 +
+      //   "년 " +
+      //   month1 +
+      //   month2 +
+      //   "월 " +
+      //   date1 +
+      //   date2 +
+      //   "일";
+
+      // document.write(birthDay);
+    </script>
+  </body>
+</html>

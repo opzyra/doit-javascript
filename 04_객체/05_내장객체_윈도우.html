@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var gender = confirm("당신은 남자입니까?");
+
+      // if (gender) {
+      //   document.write("남자");
+      // } else {
+      //   document.write("여자");
+      // }
+
+      // 콜백함수 <= 비동기 처리를한다. setInterval, setTimeout 비동기의 예시
+      var inter = setInterval(function () {
+        document.write("안녕!<br/>");
+      }, 1000);
+
+      // 몇초뒤에 함수를 실행한다
+      var time = setTimeout(function () {
+        clearInterval(inter);
+      }, 5000); // A
+
+      // 5초동안 코드가 멈춰있어야함..
+
+      // 비동기 동기
+      setTimeout(function () {
+        clearTimeout(time);
+      }, 2000); // B
+    </script>
+  </body>
+</html>
