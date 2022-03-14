@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="li">1. jquery</li>
+      <li>2. html</li>
+      <li>3. css</li>
+    </ul>
+    <ul class="aaa">
+      <li>1. nodejs</li>
+      <li>2. java</li>
+      <li>3. spring</li>
+    </ul>
+    <div class="abc">
+      <div>
+        <p>hello</p>
+      </div>
+      <div class="abc">
+        <p class="txt1">내용입니다.</p>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // parent, parents
+      var ul = $(".li").parents();
+      console.log(ul);
+
+      // closest
+      // 가장 가까운 요소만 선택한다.
+      var pt = $(".txt1").closest(".abc");
+      console.log(pt);
+
+      // children
+      var uls = $("ul").children();
+      console.log(uls);
+
+      // prev next
+      var prev = $(".aaa").prev();
+      console.log(prev);
+
+      // 체이닝
+      var next = $(".aaa").next().next();
+      // var next =
+      console.log(next);
+
+      // siblings
+      var sib = $(".aaa").siblings();
+      console.log(sib);
+    </script>
+  </body>
+</html>
