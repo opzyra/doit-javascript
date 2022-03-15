@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li class="a">
+        <span>
+          <span>사과</span>
+          <span>딸기</span>
+        </span>
+        <span>바나나</span>
+      </li>
+      <li>바나나</li>
+      <li>딸기</li>
+    </ul>
+    <section id="inner_2">
+      <h2>filter</h2>
+      <p>index 0</p>
+      <p>index 1</p>
+      <p>index 2</p>
+      <p>index 3</p>
+    </section>
+    <input class="ckb" type="checkbox" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        콘텐츠 탐색 선택자
+      */
+
+      // find vs children
+      // 바로 아래 요소, 즉 자식 요소만 탐색할때는 children()을 사용, 자식 및 하위 태그 모두에서 찾을 때는 find()를 사용
+      var ac = $(".a").children("span");
+      console.log(ac);
+
+      var af = $(".a").find("span");
+      console.log(af);
+
+      // filter
+      var array = [1, 2, 3, 4, 5];
+
+      var rs = array.filter(function (value, index) {
+        return value % 2 === 0;
+      });
+
+      $("#inner_2 p")
+        .filter(function (index, value) {
+          console.log(index);
+          return index % 2 === 0;
+        })
+        .css({ "background-color": "#0f0" });
+
+      // is
+      $(".ckb").on("click", function () {
+        console.log($(".ckb").is(":checked")); // false
+      });
+    </script>
+  </body>
+</html>

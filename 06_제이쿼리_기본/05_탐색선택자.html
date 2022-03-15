@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>사과</li>
+      <li>바나나</li>
+      <li>딸기</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        탐색선택자
+      */
+
+      // first
+      $("ul").first(); // li 사과
+      $("ul li:first");
+      // $("ul li:nth-type-of(1)")
+
+      // last
+      $("ul").last(); // li 딸기
+      $("ul li:last");
+
+      // eq
+      $("li").eq(1); // li 바나나
+
+      // slice
+      $("li").slice(2);
+    </script>
+  </body>
+</html>

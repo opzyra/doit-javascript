@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>사과</li>
+      <li>바나나</li>
+      <li>딸기</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        탐색선택자2
+      */
+
+      // each - jquery
+      // forEach - js
+      var li = $("ul li");
+      for (var i = 0; i < li.length; i++) {
+        var item = li[i];
+      }
+
+      $("ul li").each(function (index, el) {
+        if ((index + 1) % 2 === 0) {
+          $(el).css("color", "red");
+        }
+      });
+
+      var array = [1, 2, 3, 4, 5];
+
+      array.forEach(function (value, index) {
+        console.log("값:" + value);
+        console.log("인덱스: " + index);
+      });
+
+      // map js
+      var array = [1, 2, 3, 4, 5];
+      var wanted = ["1살", "2살", "3살", "4살", "5살"];
+
+      // 눈에 안보임
+      var rs = array
+        .map(function (value) {
+          return "<div>" + value + "</div>";
+        })
+        .join("");
+
+      // console.log(rs);
+      // ["하이", "하이","하이","하이","하이"];
+
+      // for (var i = 0; i < array.length; i++) {
+      //   array[i] += "살";
+      // }
+
+      document.write(rs);
+
+      // console.log(rs2);
+      // ["안녕", "안녕", "안녕"];
+      console.log(array);
+
+      // $.isArray
+      $.isArray([]); // true
+      $.isArray("hi"); // false
+    </script>
+  </body>
+</html>

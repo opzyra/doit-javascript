@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- 마크업은 수정하지 말것! -->
+    <div id="date"></div>
+    <script>
+      /*
+        아래는 현재의 시간을 화면에 표기해주는 코드가 작성되어있다.
+        초단위가 3의배수인 경우 색상에 빨간색이 나오도록 처리하보자.
+
+        아래의 코드 활용
+        선택자.css("color", "red");
+
+      */
+
+      var today = new Date();
+      // 여기서 부터 작성하시오.
+      var seconds = today.getSeconds();
+ 
+      if (seconds%3 === 0) {
+        $("#date").css("color", "red");
+      }
+
+      // 아래의 내용은 지우지말것!
+      document.getElementById("date").innerHTML = today;
+      
+    </script>
+  </body>
+</html>

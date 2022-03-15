@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <ul>
+        <li>사과</li>
+        <li>딸기</li>
+        <li><a href="https://naver.com">네이버</a></li>
+        <li>사과</li>
+      </ul>
+      <div id="hello">안녕하세요!</div>
+    </div>
+
+    <div id="aside">사이드바</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        아래의 dom 변수에 담긴 선택자를 바탕으로
+        돔을 탐색하여 원하는 돔을 선택해보자.
+      */
+
+      var dom = $("a");
+
+      // 안녕하세요! 가 담겨있는 div
+      dom.parent().parent().next();
+      // dom.closest("ul").next();
+
+      // ul의 모든 li
+      dom.parent().parent().children();
+      // dom.closest("ul").children();
+
+      // #root, #aside
+      dom.parent().parent().parent().parent().children("#root, #aside");
+      // dom.closest("body").children("#root, #aside");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="todo">
+      <h1>할일</h1>
+      <label>
+        <input type="checkbox" checked />
+        밥먹기
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" checked />
+        샤워하기
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" />
+        공부하기
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" />
+        알바하기
+      </label>
+    </div>
+    <div id="success">
+      <h1>완료</h1>
+      <label>
+        <input type="checkbox" />
+        쇼핑하기
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" />
+        음악듣기
+      </label>
+      <br />
+      <label>
+        <input type="checkbox" checked />
+        겜하기
+      </label>
+    </div>
+    <div id="result"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        위는 할일과 완료한 일 목록이다.
+        할일에 체크된 수와
+        완료에 체크된 수를 출력하는 프로그램을 작성하시오.
+      */
+      var todo = 0;
+      var success = 0;
+
+      // 출력
+      $("#result").html("할일갯수: " + todo + " 완료갯수: " + success);
+    </script>
+  </body>
+</html>

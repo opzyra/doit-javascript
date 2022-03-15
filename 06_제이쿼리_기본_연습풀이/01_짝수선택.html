@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <ul>
+      <li>사과</li>
+      <li>딸기</li>
+      <li>바나나</li>
+      <li>파인애플</li>
+      <li>멜론</li>
+    </ul>
+    <script>
+      /*
+      짝수번째 과일의 색상을 빨강색으로 바꾸자.
+      아래의 메서드를 활용할것.
+      선택자.css("color", "red");
+    */
+
+      // 반복문 활용
+      var li = $("li"); // 배열 바닐라 자바크스립트 뭉치
+
+      for (var i = 0; i < li.length; i++) {
+        var item = li[i];
+        if ((i + 1) % 2 === 0) {
+          $(item).css("color", "red");
+        }
+      }
+
+      // $("li:nth-child(2n)").css("color", "red");
+    </script>
+  </body>
+</html>
