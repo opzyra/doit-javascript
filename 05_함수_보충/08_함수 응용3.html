@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        함수 선언
+          유명함수 선언
+          무명함수를 변수에 담아서 선언
+
+        함수 호출
+          직접호출
+          간접호출(콜백함수 호출)
+          리턴을 받는 경우 => 변수에 담아서 활용하든지.. 지지고 볶던지.. 다양하게 활용할수 있다.
+          리턴이 없는 경우 undefined => void 공허하다..
+      */
+
+      // 함수 선언-유명함수
+      /*
+       function 함수명 (매개변수) {
+         자바스크립코드;
+         return 리턴값;
+         or undefined
+       }
+      */
+
+      // 즉시실행 함수
+      /*
+       무명함수를 바로 실행
+       
+       var fn = (function(){})
+       (function(){})();
+       (무명함수선언)() <= 호출
+      */
+
+      function plus(array, max) {
+        var sum = 0;
+        for (var i = 0; i < array.length; i++) {
+          if (i < max) {
+            sum += array[i];
+          }
+        }
+        return sum;
+      }
+
+      var cb = function (fn, number) {
+        var array = [];
+        for (var i = 0; i < number; i++) {
+          array.push(i + 1);
+        }
+        array = [1, 2, 3, 4, 5];
+        return fn(array, 3);
+      };
+
+      var rs = cb(plus, 5);
+      console.log(rs);
+    </script>
+  </body>
+</html>

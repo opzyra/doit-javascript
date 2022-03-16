@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        다음 결과값을 예측해보자.  
+      */
+
+      function trp(num) {
+        return num * 3;
+      }
+
+      function dbe(num) {
+        return num * 2;
+      }
+
+      function dst(num, func) {
+        var db = func(num);
+        return function (number) {
+          return number - db;
+        };
+      }
+
+      var rs1 = dst(5, dbe)(18);
+      var rs2 = dst(2, trp)(10);
+      console.log(rs1 + rs2);
+    </script>
+  </body>
+</html>
