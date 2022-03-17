@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = [1, 2, 3, 4, 5];
+
+      // for (var i = 0; i < a.length; i++) {
+      //   document.write(a[i]);
+      // }
+
+      function forEach(fn) {
+        var a = [1, 2, 3, 4, 5];
+        for (var i = 0; i < a.length; i++) {
+          fn(a[i], i); // callback
+        }
+      }
+
+      var c = a.forEach(function (value, index) {
+        document.write(value);
+      });
+
+      console.log(c);
+    </script>
+  </body>
+</html>
