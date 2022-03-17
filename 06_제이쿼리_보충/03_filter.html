@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>사과</li>
+      <li>딸기</li>
+      <li>바나나</li>
+      <li>딸기</li>
+      <li>사과</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $("ul li").length; // 5
+      var li = $("ul li");
+      // [li , li, li, li ,li]
+
+      var rs = li.filter(function (index, value) {
+        var text = $(value).text();
+        return text === "딸기";
+      });
+
+      // [li, li]
+    </script>
+  </body>
+</html>
