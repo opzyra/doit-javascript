@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // return 값이 undefined인 함수 fn을 선언하시오.
+      function fn() {}
+
+      // 변수 fn2에 담긴 return 값이 1인 무명함수를 선언하시오.
+      var fn2 = function () {
+        return 1;
+      };
+
+      // 매개변수 a를 받고 return 값이 a인 함수 fn3를 선언하시오.
+      function fn3(a) {
+        return a;
+      }
+
+      // 매개변수 a,b를 받고 return 값이 1인 함수를 변수 fn4에 담으시오.
+      var fn4 = function (a, b) {
+        return 1;
+      };
+
+      // 함수 fn4를 1,2의 파라미터로 호출하시오.
+      fn4(1, 2);
+
+      // 함수 fn3을 호출한 결과값을 변수 a에 담으시오.
+      var a = fn3();
+
+      // a의 값은?
+      console.log(a);
+      // undefined
+
+      // return 값이 1인 무명함수를 선언하고 즉시 호출하시오.
+      (function () {
+        return 1;
+      })();
+
+      // return 값이 2인 무명함수를 선언하여 변수 abc에 담고 변수에 담긴 abc를 호출하시오.
+      var abc = function () {
+        return 2;
+      };
+      abc();
+
+      // 매개변수로 fn을 받는 함수 fn4를 선언하고 함수내에서 fn을 호출하는 함수를 선언하시오.
+      function fn4(fn) {
+        fn();
+      }
+
+      // 매개변수로 fn을 받는 함수 fn5를 선언하고 함수내에서 fn을 호출한 결과값을 리턴하는 함수를 선언하시오.
+      function fn5(fn) {
+        fn();
+        return fn() + 1;
+      }
+
+      // 함수 fn5를 (return값이 1인 무명함수를 파라미터로) 호출하시오.
+      var b = fn5(function () {
+        return 1;
+      });
+
+      // b의 값은?
+      console.log(b); // 2
+    </script>
+  </body>
+</html>
