@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="title">오늘 기사</div>
+      <div class="content">안녕하세요</div>
+      <div class="date">2022.03.18</div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        append prepend
+      */
+
+      $("#root").append("<div class='wirter'>홍길동</div>");
+
+      $("#root").prepend("<div class='num'>1</div>");
+
+      /*
+        before after
+      */
+
+      $("#root").after("<div>하이요</div>");
+      $("#root").before("<div>반갑습니다.</div>");
+
+      /*
+        remove
+        선택자.remove();
+      */
+      $("#root").remove();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"><h1>안녕하세요!</h1></div>
+    <div id="root2"><h1>반갑습니다!</h1></div>
+    <input id="input1" type="text" value="하이요" />
+    <div id="root3" data-writer="김갑순">블라블라</div>
+    <input id="input2" type="checkbox" />
+    <span id="span1" style="color: red">조작조작</span>
+    <ul id="ul1">
+      <li class="active">소개</li>
+      <li>인사말</li>
+      <li>게시판</li>
+    </ul>
+    <span id="span2" class="active">비활성화</span>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        속성조작 메서드
+
+        html text
+
+        선택자.html() => 현재 내용을 추출
+        선택자.html("원하는 내용"); => 현재 내용을 변경
+      */
+
+      var root = $("#root").html();
+      console.log(root);
+
+      $("#root").html("<h2>안녕하세요!</h2>");
+
+      // text
+      var root2 = $("#root2").text();
+      console.log(root2);
+
+      $("#root2").text("<h2>반갑습니다!</h2>");
+
+      // attr
+      /*
+        선택자.attr("속성명"); => 추출
+        선택자.attr("속성명", "원하는 내용"); => 변경
+      */
+      var itype = $("#input1").attr("type");
+      console.log(itype);
+
+      // $("#input1").attr("type", "checkbox");
+
+      // data-attribute
+      var writer = $("#root3").attr("data-writer");
+      var writer2 = $("#root3").data("writer");
+      console.log(writer);
+      console.log(writer2);
+
+      // removeAttr
+      /*
+        선택자.removeAttr("속성명");
+      */
+      $("#input1").removeAttr("readonly");
+
+      // prop
+      /*
+        선택자.prop("상태 속성명"); => 추출
+        선택자.prop("상태 속성명", "원하는 값"); => 변경
+      */
+      var input2 = $("#input2").prop("checked");
+      //console.log(input2);
+
+      $("#input2").prop("checked", true);
+      input2 = $("#input2").prop("checked");
+      console.log(input2);
+
+      // val
+      /*
+        선택자.val(); => 추출
+        선택자.val("원하는 값") => 변경
+      */
+
+      var value = $("#input1").val();
+      console.log(value);
+
+      $("#input1").val("바이요");
+
+      // css
+      /*
+        html style 인라인태그
+        선택자.css("속성명"); => 추출
+        선택자.css("속성명", "원하는 값") => 변경
+      */
+      var color = $("#span1").css("color");
+      console.log(color);
+
+      $("#span1").css("color", "blue");
+
+      // class
+      /*
+        addClass, removeClass, toggleClass, hasClass
+        선택자.addClass("클래스명"); => 추가
+        선택자.removeClass("클래스명"); => 제거
+        선택자.toggleClass("클래스명"); => 토글한다.
+        선택자.hasClass("클래스명"); => 존재여부 확인 return 불린
+      */
+
+      // $("#ul1 li:nth-of-type(2)").addClass("active");
+      $("#ul1 li").eq(1).addClass("active");
+
+      $("#ul1 li").eq(0).removeClass("active");
+
+      $("#ul1 li").eq(2).toggleClass("active");
+
+      // $("#ul1 li").removeClass("active");
+
+      $("#ul1 li").text("하이");
+
+      var has = $("#span2").hasClass("active");
+      if (has) {
+        $("#span2").text("활성화");
+      }
+    </script>
+  </body>
+</html>

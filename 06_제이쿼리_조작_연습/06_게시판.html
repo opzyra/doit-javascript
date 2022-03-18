@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <h1>게시판</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>작성자</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        아래의 배열은 서버에서 가져온 게시글 목록이다.
+        화면의 테이블에서 tbody부분에 tr로 각 정보를 랜더링해보자.
+      */
+      var posts = [
+        {
+          title: '바이든, 처음으로 "푸틴은 전범"…러 크렘린궁 "용서 못해"',
+          contents:
+            "조 바이든 미국 대통령은 16일(현지시간) 우크라이나 침공을 지시한 블라디미르 푸틴 러시아 대통령에 대해 처음으로 ‘전범(war criminal)’이라는 단어를 사용...",
+          writer: "연합뉴스",
+        },
+        {
+          title: "러, 국가부도 위기 벗어났나…“달러 표시 국채 2건 이자 지급”",
+          contents:
+            "러시아가 달러 국채이자를 지급했다고 밝혔다. 국제제재가 강화되면서 제기됐던 국가부도 위기의 급한 불은 일단 끈 것으로 보인다.",
+          writer: "한겨레",
+        },
+        {
+          title: '우크라 "러시아군, 민간인 대피 행렬까지 공격"',
+          contents:
+            "러시아의 우크라이나 침공 21일째인 16일에도 우크라이나 곳곳에서 민간인의 인명피해가 이어졌습니다. 로이터 통신에 따르면 올렉산드르 스타루흐 자포리자 주지사는 이날...",
+          writer: "SBS",
+        },
+      ];
+    </script>
+  </body>
+</html>
