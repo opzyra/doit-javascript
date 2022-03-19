@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        아래는 댓글과 관련된 데이터 객체이다.
+        모든 댓글의 좋아요 갯수를 합하여 출력하는 프로그램을 작성하시오.
+      */
+      var comments = [
+        { contens: "동해번쩍, 서해번쩍", writer: "홍길동", like: 20, hate: 1 },
+        { contens: "학익진을 펼쳐라", writer: "이순신", like: 99, hate: 5 },
+        { contens: "과학은 위대하다", writer: "장영실", like: 5, hate: 20 },
+        { contens: "진격하라!", writer: "강감찬", like: 20, hate: 1 },
+      ];
+
+      var sum = 0;
+      comments.forEach(function (item, index) {
+        sum += item.like;
+      });
+
+      // 출력
+      document.write(sum);
+    </script>
+  </body>
+</html>

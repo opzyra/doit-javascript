@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>빨강</li>
+      <li>노랑</li>
+      <li>초록</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        사용자는 1,2,3 세개의 숫자를 입력할수 있다.
+        1번을 입력하면 DOM 빨강의 색상을 red로
+        2번을 입력하면 DOM 노랑의 색상을 yellow로
+        3번을 입력하면 DOM 초록의 색상을 green으로 변경해보자.
+      */
+
+      var number = prompt("숫자 입력", "0");
+      var colors = ["red", "yellow", "green"];
+
+      $("ul li")
+        .eq(number - 1)
+        .css("color", colors[number - 1]);
+    </script>
+  </body>
+</html>
