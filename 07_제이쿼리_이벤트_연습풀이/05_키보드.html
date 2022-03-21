@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <h1>아스키 코드</h1>
+    <div id="code"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        인풋태그에 키보드로 키를 입력하면 
+        아스키코드 값이 화면에 출력되는 프로그램을 작성하시오.
+      */
+      // $("input").on("keydown", function (event) {
+      //   $("#code").text(event.keyCode);
+      // });
+      $("input").on("keydown", function (event) {
+        $("div").text(event.keyCode);
+      });
+    </script>
+  </body>
+</html>

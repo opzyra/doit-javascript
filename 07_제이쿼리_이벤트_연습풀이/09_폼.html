@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      아이디: <input name="id" type="text" /><br />
+      비밀번호: <input name="password" type="password" />
+      <button type="submit">로그인</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.serializeObject/2.0.3/jquery.serializeObject.min.js"></script>
+    <script>
+      /*
+        로그인할때 상황에 따라 아래의 메시지를 alert창으로 보여주는 프로그램을 작성하시오.
+        아이디를 입력하지 않았을때: 아이디를 입력해주세요.
+        비밀번호를 입력하지 않았을때: 비밀번호를 입력해주세요.
+      */
+
+      $("#form").on("submit", function (event) {
+        event.preventDefault();
+
+        var params = $(event.target).serializeObject();
+
+        console.log(params);
+
+        if (!params.id) {
+          alert("아이디를 입력해주세요.");
+          return;
+        }
+
+        if (!params.password) {
+          alert("비밀번호를 입력해주세요.");
+          return;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="http://google.com">이동</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        이동 버튼을 클릭해도 다른 사이트로 이동되지 않도록하는 프로그램을 작성해보자.  
+      */
+      $("a").on("click", function (event) {
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>

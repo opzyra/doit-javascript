@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="red">red</button>
+    <button class="blue">blue</button>
+    <button class="green">green</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        버튼을 클릭하면 body의 background가 해당 색상으로 바뀌는 프로그램을 작성해보자.
+      */
+      /*
+      $(".red").on("click", function () {
+        $("body").css("background", "red");
+      });
+
+      $(".blue").on("click", function () {
+        $("body").css("background", "blue");
+      });
+
+      $(".green").on("click", function () {
+        $("body").css("background", "green");
+      });
+      */
+
+      // 응용
+      $("button").on("click", function (event) {
+        var target = $(event.target);
+        var color = target.text();
+        $("body").css("background", color);
+      });
+    </script>
+  </body>
+</html>

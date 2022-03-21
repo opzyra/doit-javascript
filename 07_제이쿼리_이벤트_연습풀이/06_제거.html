@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="trigger" type="button">경고창</button>
+    <button id="remove" type="button">경고창 제거</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        경고창 버튼을 클릭하면 함수 fn이 실행되도록하고
+        경고창 제거 버튼을 클릭하면 경고창에 등록되어있는 이벤트를 제거하는 프로그램을 작성하시오.
+      */
+      function fn() {
+        alert("경고!");
+      }
+
+      $("#trigger").on("click", fn);
+      $("#remove").on("click", function () {
+        $("#trigger").off("click");
+      });
+    </script>
+  </body>
+</html>

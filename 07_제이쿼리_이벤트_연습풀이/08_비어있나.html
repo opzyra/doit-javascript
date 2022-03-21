@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    아이디: <input type="text" /><br />
+    비밀번호: <input type="password" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        아이디가 비어있는 상태로 비밀번호에 포커싱이 되면 alert창을 보여주는 프로그램을 작성해보자.
+      */
+
+      $("input[type=password]").on("focus", function () {
+        var value = $("input[type=text]").val();
+        if (!value) {
+          alert("얼럿!");
+          $("input[type=text]").focus();
+        }
+      });
+    </script>
+  </body>
+</html>
