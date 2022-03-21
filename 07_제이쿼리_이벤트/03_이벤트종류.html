@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .mouse {
+        width: 300px;
+        height: 300px;
+        background: red;
+      }
+
+      .scroll {
+        width: 300px;
+        height: 300px;
+        background: green;
+        overflow: scroll;
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">나를 클릭해봐!</button>
+    <div id="mouse" class="mouse"></div>
+    <div id="scroll" class="scroll">
+      안녕<br />
+      안녕<br />안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+      안녕<br />
+    </div>
+    <input id="focus" type="text" placeholder="포커스" />
+    <input id="keyboard" type="text" placeholder="키보드" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $("#button").on("click", function () {
+        alert("클릭했네요!");
+        // $("#button").off("click");
+      });
+
+      $("#mouse").on("mouseenter", function () {
+        console.log("마우스 들어왔다!" + new Date().getMilliseconds());
+      });
+
+      $("#mouse").on("mouseleave", function () {
+        console.log("마우스 나갔다!" + new Date().getMilliseconds());
+      });
+
+      $("#scroll").on("scroll", function () {
+        console.log("스크롤했네?");
+      });
+
+      $("#focus").on("focus", function () {
+        console.log("포커싱!");
+        $("#button").trigger("click");
+      });
+
+      $("#focus").on("blur", function () {
+        // var value = $("#focus").val();
+        // if (!value) {
+        //   alert("아무것도 안썻네?");
+        // }
+      });
+
+      $("#keyboard").on("keydown", function () {
+        console.log("키다운");
+      });
+    </script>
+  </body>
+</html>

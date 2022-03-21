@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="button">클릭</button>
+    <span>내용</span>
+    <button class="button">클릭2</button>
+    <span>내용2</span>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(".button").on("click", function (event) {
+        var target = $(event.target);
+        target.next().text("클릭했네요.");
+        //target.text("클릭했네요?");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #mouse {
+        width: 300px;
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mouse">
+      마우스<br />
+      마우스<br />
+      마우스<br />
+      마우스<br />
+      마우스<br />
+      마우스<br />
+      마우스<br />
+      마우스<br />
+      마우스<br />
+      마우스<br />
+    </div>
+    <input id="keyboard" type="text" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $("#mouse").on("mouseup", function (event) {
+        console.log("x좌표:" + event.originalEvent.x);
+        console.log("y좌표:" + event.originalEvent.y);
+      });
+
+      $("#keyboard").on("keypress", function (event) {
+        var target = $(event.target);
+        if (event.keyCode === 13 && target.val() === "") {
+          alert("뭐좀쓰고 엔터쳐라.");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="http://www.naver.com">네이버</a>
+    <a href="http://kakao.com">카카오</a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $("a").on("click", function (event) {
+        event.preventDefault();
+        var target = $(event.target);
+        var href = target.attr("href");
+        console.log(href);
+      });
+    </script>
+  </body>
+</html>
