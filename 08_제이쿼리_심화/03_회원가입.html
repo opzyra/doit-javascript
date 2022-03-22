@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      아이디: <input name="id" type="text" /><br />
+      비밀번호: <input name="password" type="password" /><br />
+      새로운 비밀번호: <input name="password2" type="password" /><br />
+      확인: <input name="password3" type="password" /><br />
+      <button type="submit">비밀번호 변경</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.serializeObject/2.0.3/jquery.serializeObject.min.js"></script>
+    <script>
+      function getMember(id) {
+        var database = [
+          {
+            id: "hong",
+            password: "5541",
+            name: "홍길동",
+          },
+          {
+            id: "lee",
+            password: "korea12",
+            name: "이순신",
+          },
+          {
+            id: "jobs",
+            password: "#$sww21",
+            name: "잡스",
+          },
+        ];
+
+        var member = database.find(function (value, index) {
+          return value.id === id;
+        });
+        return member;
+      }
+
+      $("#form").on("submit", function (event) {
+        event.preventDefault();
+        var params = $(event.target).serializeObject();
+
+        var member = getMember(params.id);
+
+        if (!member) {
+          alert("회원명단에 없습니다.");
+          return;
+        }
+
+        if (member.password !== params.password) {
+          alert("비밀번호를 확인해주세요.");
+          return;
+        }
+
+        // 새로운 비밀번호의 길이가 8자보다 작으면
+        // 8자 이상을 입력해주세요. alert
+
+        // 새로운 비밀번호와 비밀번호 확인이 일치하지 않는다면
+        // 새로운 비밀번호를 확인해주세요. alert
+
+        // 새로운 비밀번호가 비밀번호 확인과 일치하면
+        // XXX님 비밀번호 변경이 완료되었습니다. alert
+      });
+    </script>
+  </body>
+</html>

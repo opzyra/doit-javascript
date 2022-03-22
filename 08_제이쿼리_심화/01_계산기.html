@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <input name="number1" type="text" />
+      <select name="spr">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">x</option>
+        <option value="/">/</option>
+      </select>
+      <input name="number2" type="text" />
+      <br />
+      배수 체크: <input name="number3" type="text" />
+      <button type="submit">계산</button>
+    </form>
+    <div>
+      결과:
+      <span id="result">0</span>
+    </div>
+    <div>
+      <span id="n">N</span>의배수?
+      <span id="check">false</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.serializeObject/2.0.3/jquery.serializeObject.min.js"></script>
+    <script>
+      /*
+        계산기
+        숫자를 가지고 연산
+
+        변형
+        2의 배수 체크
+
+      */
+
+      $("#form").on("submit", function (event) {
+        event.preventDefault();
+        var params = $(event.target).serializeObject();
+        var result;
+
+        var number1 = parseInt(params.number1);
+        var number2 = parseInt(params.number2);
+
+        // 코드를 작성..
+        if (params.spr === "+") {
+          result = number1 + number2;
+        }
+
+        if (params.spr === "-") {
+          result = number1 - number2;
+        }
+
+        if (params.spr === "x") {
+          result = number1 * number2;
+        }
+
+        if (params.spr === "/") {
+          result = number1 / number2;
+        }
+
+        $("#result").text(result);
+      });
+    </script>
+  </body>
+</html>
