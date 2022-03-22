@@ -5,13 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        width: 100%;
+        height: auto;
+        border-collapse: separate;
+        border-spacing: 0;
+      }
+      thead > tr:nth-child(1) > th {
+        width: 100%;
+        height: 100px;
+        border-bottom: 3px solid navy;
+      }
+      thead > tr:nth-child(2) > th {
+        height: 50px;
+        margin: 0;
+        padding: 0;
+        border: 1px solid lightcyan;
+      }
+      tbody td {
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        vertical-align: top;
+        border: 0.5px solid lightgray;
+      }
+
+      tbody tr td:first-of-type {
+        color: red;
+      }
+
+      tbody tr td:last-of-type {
+        color: blue;
+      }
+
+      .holiday {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     몇월? <input id="month" type="text" />
     <button id="button" type="button">달력보기</button>
     <hr />
-    <button>이전달력</button>
-    <button>다음달력</button>
+    <button id="prev">이전달력</button>
+    <button id="next">다음달력</button>
     <table>
       <thead>
         <tr>
@@ -31,13 +70,35 @@
     </table>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-      $("#button").on("click", function () {
-        var value = $("#month").val();
+      var month = 1;
+      var holidays = [
+        "1.1",
+        "3.1",
+        "5.5",
+        "6.6",
+        "8.15",
+        "10.3",
+        "10.9",
+        "12.25",
+      ];
 
-        var date = new Date(2022, value - 1, 1);
+      function monthCheck(targetMonth) {
+        if (targetMonth > 0 && targetMonth < 13) {
+          month = targetMonth;
+          return true;
+        }
+
+        alert("그런달없는디?");
+        return false;
+      }
+
+      function render(month) {
+        var date = new Date(2022, month - 1, 1);
         var dayNumber = date.getDay(); // 0
 
-        var lastDay = new Date(2022, value, 0).getDate();
+        var lastDay = new Date(2022, month, 0).getDate();
+
+        $("#monthText").text(month);
 
         var tbody = $("table tbody");
         var markup = "";
@@ -46,17 +107,37 @@
           markup += "<tr>";
           for (var j = 0; j < 7; j++) {
             var day = j + 1 + 7 * i - dayNumber;
+            var isHoliday = holidays.indexOf(month + "." + day) >= 0;
+            var td = "<td>";
+            if (isHoliday) {
+              td = "<td class='holiday'>";
+            }
+
             if (day > lastDay || day < 1) {
               day = "";
             }
-            markup += "<td>" + day + "</td>";
+            markup += td + day + "</td>";
           }
           markup += "</tr>";
         }
 
-        console.log(markup);
-
         tbody.html(markup);
+      }
+
+      $("#button").on("click", function () {
+        var value = $("#month").val();
+        month = parseInt(value);
+        render(month);
+      });
+
+      $("#prev").on("click", function () {
+        var pre = month - 1;
+        monthCheck(pre) && render(pre);
+      });
+
+      $("#next").on("click", function () {
+        var next = month + 1;
+        monthCheck(next) && render(next);
       });
     </script>
   </body>

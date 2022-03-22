@@ -60,12 +60,24 @@
 
         // 새로운 비밀번호의 길이가 8자보다 작으면
         // 8자 이상을 입력해주세요. alert
+        if (params.password2 < 8) {
+          alert("8자 이상을 입력해주세요.");
+          return;
+        }
 
         // 새로운 비밀번호와 비밀번호 확인이 일치하지 않는다면
         // 새로운 비밀번호를 확인해주세요. alert
+        if (params.password2 !== params.password3) {
+          alert("새로운 비밀번호를 확인해주세요.");
+          return;
+        }
 
         // 새로운 비밀번호가 비밀번호 확인과 일치하면
         // XXX님 비밀번호 변경이 완료되었습니다. alert
+        if (params.password2 === params.password3) {
+          alert(member.name + "님 비밀번호 변경이 완료되었습니다.");
+          return;
+        }
       });
     </script>
   </body>

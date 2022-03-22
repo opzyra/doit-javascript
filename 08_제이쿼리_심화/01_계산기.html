@@ -17,7 +17,7 @@
       </select>
       <input name="number2" type="text" />
       <br />
-      배수 체크: <input name="number3" type="text" />
+      배수 체크: <input id="number3" name="number3" type="text" />
       <button type="submit">계산</button>
     </form>
     <div>
@@ -48,6 +48,7 @@
 
         var number1 = parseInt(params.number1);
         var number2 = parseInt(params.number2);
+        var number3 = parseInt(params.number3);
 
         // 코드를 작성..
         if (params.spr === "+") {
@@ -67,6 +68,14 @@
         }
 
         $("#result").text(result);
+
+        $("#n").text(number3);
+        $("#check").text(result % number3 === 0);
+      });
+
+      $("#number3").on("input", function (event) {
+        var value = $(event.target).val();
+        $("#n").text(value);
       });
     </script>
   </body>
