@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form" method="post">
+      생년월일 (YYYYMMDD)
+      <input name="text" type="text" /><br />
+      <button type="submit">전송</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.serializeObject/2.0.3/jquery.serializeObject.min.js"></script>
+    <script>
+      $("#form").on("submit", function (event) {
+        event.preventDefault();
+        var target = $(event.target);
+        var params = target.serializeObject();
+
+        console.log(params.phone);
+      });
+    </script>
+  </body>
+</html>

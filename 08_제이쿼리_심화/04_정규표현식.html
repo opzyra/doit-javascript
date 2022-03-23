@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        정규표현식이란?
+        우리가 문자열에서 내가 원하는 부분만 추출하고 싶을때.
+        사용하는 기술?
+
+        김갑순
+        김길동
+        김호야
+
+        김**
+
+        내가 원하는 조건을 추상화하여 설정하면 해당 설정에 일치하는 문자열을 추출할 수 있다.
+
+        a.txt
+        abc.hwp
+        ddd.exe
+        b.txt
+
+
+        *.txt = > a.txt, b.txt
+
+
+        회원가입 인풋 유효성검사
+        비밀번호는 8자리 대문자 1개이상 필수, 특수문자 1개이상 포함해야 합니다.
+
+      */
+
+      /*
+
+        /원하는 조건들을 문법에 맞춰 작성/(부가옵션)
+
+        자바스크립트에서 정규표현식 활용하기
+        String.match(정규표현식)
+        var regx = new RegExp(정규표현식);
+        regx.test("문자열");
+
+      */
+
+      /*
+        . -> 모든 문자와 일치
+        | -> 왼쪽 혹은 오른쪽과 일치
+        [] -> 문자 집합 구성원중 하나 일치
+        [A-Z] -> 범위 정의 A부터 Z까지
+        [0-9] -> 0 부터 9까지
+        \ -> 이스케이프 
+      */
+      var str = '안녕 나는 "홍길동"이야.';
+      var regx = new RegExp(/\"[a-z]\'/);
+      var result = regx.test("\"a'");
+      console.log(result);
+      console.clear();
+
+      /*
+       수량자
+       + -> 하나 이상찾기
+       {n} -> 정확히 n개 있어야함
+       {m,n} -> m에서부터 n번치
+       {n,} -> n번 이상일치
+
+       시작과 끝
+       ^내용을쓰고$ -> 시작과끝
+
+      */
+      var regx = new RegExp(/^$/);
+      var result = regx.test("aaa");
+      console.log(result);
+      console.clear();
+      /*
+        특수문자
+        \t -> 탭키
+        \n -> 개행문자
+        \r -> 개행문자
+        \d -> 모든 숫자 0~9
+        \D -> \d의 반대 모든 숫자가 아닌 문자
+        \s -> 공백 문자
+        \S -> \s의 반대 공백문자가 아닌 모든 문자
+      */
+
+      var str = "안녕하세요\n접니다.";
+      console.log(str);
+
+      str = str.replace(/\n/, "<br/>");
+      document.write(str);
+      console.clear();
+
+      var str = "안녕하세요 저는 홍길동 입니다.";
+      var rs = str.replace(/\s/g, "");
+      console.log(rs);
+    </script>
+  </body>
+</html>
