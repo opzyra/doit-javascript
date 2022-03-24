@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script>
+      /*
+        지금 이순간을 아래와 같이 표현해보자.
+        YYYY년 M월 D일 H시 m분
+
+        만약 실행 시점의 시간이 2022/03/10 16:03 이라면
+        2022년 3월 10일 16시 3분 으로 출력 (document.write 사용)
+      */
+      // var today = new Date();
+      // var nowYears = today.getFullYear();
+      // var nowMonth = today.getMonth() + 1;
+      // var nowDate = today.getDate();
+      // var nowHours = today.getHours();
+      // var nowMinutes = today.getMinutes();
+
+      // document.write(
+      //   nowYears +
+      //     "년 " +
+      //     nowMonth +
+      //     "월 " +
+      //     nowDate +
+      //     "일 " +
+      //     nowHours +
+      //     "시 " +
+      //     nowMinutes +
+      //     "분 "
+      // );
+      var date = moment("1995-01-25").format("YYYY.MM.DD");
+      document.write(date);
+      // document.write(moment().format("YYYY년 M월 D일 H시 m분"));
+    </script>
+  </body>
+</html>
