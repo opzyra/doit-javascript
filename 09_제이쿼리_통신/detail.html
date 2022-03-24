@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="title"></div>
+    <div id="contents"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      function getQueryStringObject() {
+        var a = window.location.search.substr(1).split("&");
+        if (a == "") return {};
+        var b = {};
+        for (var i = 0; i < a.length; ++i) {
+          var p = a[i].split("=", 2);
+          if (p.length == 1) b[p[0]] = "";
+          else b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+        }
+        return b;
+      }
+      var query = getQueryStringObject();
+      var id = query.id;
+
+      $.ajax({
+        url: "https://623bb5052e056d1037f5dea7.mockapi.io/api/v1/post/" + id,
+        type: "get",
+      })
+        .done(function (data) {
+          $("#title").html(data.title);
+          $("#contents").html(data.contents);
+        })
+        .fail(function () {
+          alert("실패!");
+        });
+    </script>
+  </body>
+</html>

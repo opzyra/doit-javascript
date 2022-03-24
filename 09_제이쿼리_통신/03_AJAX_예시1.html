@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>순번</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성일</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $.ajax({
+        url: "https://623bb5052e056d1037f5dea7.mockapi.io/api/v1/post",
+        type: "get",
+      })
+        .done(function (data) {
+          var html = "";
+
+          for (var i = 0; i < data.length; i++) {
+            var row = data[i];
+            // tr열기
+            html += "<tr>";
+
+            // 순번
+            html += "<td>";
+            html += row.id;
+            html += "</td>";
+
+            // 제목
+            html += "<td>";
+            html += "<a href='detail.html?id=" + row.id + "'>";
+            html += row.title;
+            html += "</a>";
+            html += "</td>";
+
+            // 작성자
+            html += "<td>";
+            html += row.writer;
+            html += "</td>";
+
+            // 작성일
+            html += "<td>";
+            html += row.createdAt;
+            html += "</td>";
+
+            html += "</tr>";
+          }
+
+          $("table tbody").html(html);
+        })
+        .fail(function () {
+          alert("실패!");
+        });
+    </script>
+  </body>
+</html>

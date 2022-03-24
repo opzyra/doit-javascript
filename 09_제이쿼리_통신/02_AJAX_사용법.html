@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      /*
+        사용방법
+        $.ajax({
+          url: "서버의 URL", // 어느 서버에 요청할거냐? 
+          type: "GET | POST | PUT | PATCH | DELETE ...", // 어떤방식?
+          data: "전송할데이터", // 전달할 자료.. form정보..
+          dataType: "json", // 
+          success: function() {}, // 성공하면 실행할 함수
+          error: function() {} // 실패하면 실행할 함수
+        });
+      */
+      console.log(this); // windown
+
+      // $.ajax({
+      //   url: "https://623bb5052e056d1037f5dea7.mockapi.io/api/v1/post",
+      //   type: "get",
+      //   success: function (data) {
+      //     // 가독성이 떨어짐
+      //     // 스코프의 문제가 발생
+      //     console.log(this); // window???
+      //     console.log(data);
+      //   },
+      //   error: function () {
+      //     console.log("실패!");
+      //   },
+      // });
+
+      // 개선안
+      $.ajax({
+        url: "https://623bb5052e056d1037f5dea7.mockapi.io/api/v1/post",
+        type: "get",
+      })
+        .done(function (data) {
+          console.log(data);
+        })
+        .fail(function () {
+          alert("실패!");
+        });
+
+      // 모던 자바스크립트 ES5 ES6 이상버전..
+      // async await
+
+      // async function test() {
+      //   var data = await $.ajax({
+      //     url: "https://623bb5052e056d1037f5dea7.mockapi.io/api/v1/post",
+      //     type: "get",
+      //   });
+
+      //   console.log(data);
+      // }
+
+      // test();
+    </script>
+  </body>
+</html>
